@@ -33,14 +33,6 @@ namespace Snakev2
                 Console.WriteLine("|");
             }
 
-
-
-
-            //Console.SetCursorPosition(2, 2);
-            //Console.WriteLine("┓");           -------> jak dodac cornery oraz jak zrobic ramke taka bez przerwy
-
-            //Console.SetCursorPosition(Width, 15);
-            // Console.WriteLine("┍");
             Console.ForegroundColor = ConsoleColor.Gray;
         }
 
