@@ -6,7 +6,7 @@ namespace Snakev2
 {
     class Fruit
     {
-       static Random Rnd = new Random();
+        static Random Rnd = new Random();
         public Position CurrentPos { get; set; } = new Position(Rnd.Next(2, 25), Rnd.Next(2, 25));
 
         public Fruit()
@@ -21,7 +21,5 @@ namespace Snakev2
             Console.WriteLine("■");
 
         }
-
-
     }
 }

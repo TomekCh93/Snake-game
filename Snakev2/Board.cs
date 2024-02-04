@@ -41,7 +41,6 @@ namespace Snakev2
             Console.SetCursorPosition(15, 0);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"Score:{score}");
-
         }
     }
 }

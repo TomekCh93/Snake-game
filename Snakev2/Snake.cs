@@ -7,7 +7,6 @@ namespace Snakev2
 {
     public class Snake
     {
-
         int Length = 3;
         public EnumDir direction { get; set; } = EnumDir.Right;
         public Position snakeHeadPos { get; set; } = new Position();
@@ -15,19 +14,14 @@ namespace Snakev2
         public bool gameOver = false;
         public string endInfo = null;
 
-
-
-
         public void EatMeal()
         {
             Length++;
             Board.score += 100;
-
         }
 
         public void Move()
         {
-
             switch (direction)
             {
                 case EnumDir.Left:
@@ -45,7 +39,6 @@ namespace Snakev2
                 default:
                     break;
             }
-
             Console.SetCursorPosition(snakeHeadPos.X, snakeHeadPos.Y);
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("■");
@@ -53,7 +46,6 @@ namespace Snakev2
             snakePositions.Add(new Position(snakeHeadPos.X, snakeHeadPos.Y));
             if (snakePositions.Count > Length)
             {
-
                 Position FirstPosition = snakePositions.First();
                 Console.SetCursorPosition(FirstPosition.X, FirstPosition.Y);
                 Console.Write(" ");
@@ -67,11 +59,9 @@ namespace Snakev2
             int pointNum = 0;
             for (int i = 0; i < snakePositions.Count; i++)
             {
-
                 if (snakeHeadPos.X == snakePositions[i].X && snakeHeadPos.Y == snakePositions[i].Y)
                 {
                     pointNum++;
-
                 }
                 if (pointNum > 1)
                 {
@@ -86,11 +76,7 @@ namespace Snakev2
 
                 gameOver = true;
             }
-
-
         }
-
-
     }
 
     public enum EnumDir
